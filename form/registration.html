@@ -35,6 +35,14 @@
   * Author: Bibhu Mishra (Syntax Savvy)
   ======================================================== 
 -->
+
+<!--fairbase -->
+<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+
+<!-- Add Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+
 </head>
 
 <body>
@@ -147,8 +155,8 @@
         <div class="form-group">
             <button type="button" class="price-button" id="priceButton" disabled>Price: INR 0</button>
         </div>
-        <div class="form-group">
-             <!--   ******************* -->
+        <!--<div class="form-group">
+               ******************* 
 <div class="pe_signin_button" data-client-id="11767695835075961518"><script src="https://www.phone.email/sign_in_button_v1.js" async></script></div>
 <script>
     function phoneEmailListener(userObj){
@@ -159,7 +167,11 @@
         // Delete following code once you complete integration step 2.
         document.querySelector('.pe_signin_button').insertAdjacentHTML('beforeend', '<span>Phone Verification Successfull !! <br />Read following user_json_url from backend to get verified phone number - '+user_json_url+' <br /> Please delete this debug message code from phoneEmailListener function once you implement integration step 2.</span>');
     }
-</script> 
+</script> -->
+
+        <div class="form-group">
+            <button type="submit">Submit</button>
+        </div>
         </div>
         
     </form>
