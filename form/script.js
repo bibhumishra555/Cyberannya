@@ -19,29 +19,33 @@ const db = firebase.firestore();
 
 // Function to handle form submission
 function submitForm(event) {
-    event.preventDefault();
+  event.preventDefault();
 
-    // Get form data
-    const name = document.getElementById('name').value;
-    const mobile = document.getElementById('mobile').value;
-    const email = document.getElementById('email').value;
-    const college = document.getElementById('college').value;
-    const course = document.getElementById('course').value;
+  console.log('Form submission started');
+  
+  const name = document.getElementById('name').value;
+  const mobile = document.getElementById('mobile').value;
+  const email = document.getElementById('email').value;
+  const college = document.getElementById('college').value;
+  const course = document.getElementById('course').value;
 
-    // Save form data to Firestore
-    db.collection('registrations').add({
-        name: name,
-        mobile: mobile,
-        email: email,
-        college: college,
-        course: course
-    })
-    .then(() => {
-        alert('Registration successful!');
-        document.getElementById('registrationForm').reset();
-    })
-    .catch((error) => {
-        console.error('Error writing document: ', error);
-        alert('Error in registration. Please try again.');
-    });
+  console.log('Form data:', { name, mobile, email, otp, college, course });
+
+  db.collection('registrations').add({
+    name: name,
+    mobile: mobile,
+    email: email,
+    otp: otp,
+    college: college,
+    course: course
+  })
+  .then(() => {
+    console.log('Data saved successfully');
+    alert('Registration successful!');
+    document.getElementById('registrationForm').reset();
+  })
+  .catch((error) => {
+    console.error('Error writing document: ', error);
+    alert('Error in registration. Please try again.');
+  });
 }
