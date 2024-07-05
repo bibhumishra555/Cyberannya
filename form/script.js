@@ -1,22 +1,27 @@
 
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
 
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyDyXsD-cXaA9uWqGxo-HlLFeppbfZFaKlc",
-  authDomain: "login-fca74.firebaseapp.com",
-  projectId: "login-fca74",
-  storageBucket: "login-fca74.appspot.com",
-  messagingSenderId: "25232731555",
-  appId: "1:25232731555:web:6db9952517c7627569be16",
-  measurementId: "G-Y8N2SY72DE"
-};
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCUvfhKyttDlt0429-eNktvlyi2tevBG8g",
+    authDomain: "cyberannya.firebaseapp.com",
+    projectId: "cyberannya",
+    storageBucket: "cyberannya.appspot.com",
+    messagingSenderId: "635998414209",
+    appId: "1:635998414209:web:e54fa0b6a4ee9e105ef480",
+    measurementId: "G-983YQVSW4W"
+  };
 
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-
-// Initialize Firestore
-const db = firebase.firestore();
-
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
 // Function to handle form submission
 function submitForm(event) {
   event.preventDefault();
