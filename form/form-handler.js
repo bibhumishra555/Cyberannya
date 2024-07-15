@@ -1,9 +1,9 @@
-import { database } from './firebase-config.js';
-import { ref, set } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-database.js";
+import { db } from './firebase-config.js';
+import { collection, addDoc } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-firestore.js";
 
 // Handle form submission
 const form = document.getElementById('registrationForm');
-form.addEventListener('submit', (e) => {
+form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const name = document.getElementById('name').value;
@@ -18,17 +18,18 @@ form.addEventListener('submit', (e) => {
         return;
     }
 
-    const newUserRef = ref(database, 'users/' + Date.now());
-    set(newUserRef, {
-        name: name,
-        mobile: mobile,
-        email: email,
-        college: college,
-        course: course
-    }).then(() => {
-        alert('Data submitted successfully');
+    try {
+        await addDoc(collection(db, "users"), {
+            name: name,
+            mobile: mobile,
+            email: email,
+            college: college,
+            course: course,
+            timestamp: new Date().toISOString()
+        });
+        alert('Registration successfull for Cyberanya 3.O');
         form.reset();
-    }).catch((error) => {
-        alert('Error submitting data: ' + error);
-    });
+    } catch (error) {
+        alert('Error in Registration: ' + error);
+    }
 });
