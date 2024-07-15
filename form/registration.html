@@ -116,61 +116,46 @@
     </section><!-- End Breadcrumbs -->
 
     <div class="form-container">
-    <h2>CyberAnya Registration Form</h2>
-    <form id="registrationForm">
-        <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
-        </div>
-        <div class="form-group">
-            <label for="mobile">Mobile Number</label>
-            <input type="text" id="mobile" name="mobile" required>
-        </div>
-        <div class="form-group">
-            <label for="college">Choose College</label>
-            <select id="college" name="college" required onchange="calculatePrice()">
-                <option value="">Select College</option>
-                <option value="LND">LND</option>
-                <option value="MS">MS</option>
-                <option value="SNS">SNS</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="course">Choose Course</label>
-            <select id="course" name="course" required onchange="calculatePrice()">
-                <option value="">Select Course</option>
-                <option value="UG">UG</option>
-                <option value="PG">PG</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <button type="button" class="price-button" id="priceButton" disabled>Price: INR 0</button>
-        </div>
-        <!--<div class="form-group">
-               ******************* 
-<div class="pe_signin_button" data-client-id="11767695835075961518"><script src="https://www.phone.email/sign_in_button_v1.js" async></script></div>
-<script>
-    function phoneEmailListener(userObj){
-        var user_json_url = userObj.user_json_url;
-        // You can submit your form here or redirect user to post login dashboard page
-        // Send user_json_url to your backend to retrieve user info (i.e. country code and phone number) from this URL.
-        
-        // Delete following code once you complete integration step 2.
-        document.querySelector('.pe_signin_button').insertAdjacentHTML('beforeend', '<span>Phone Verification Successfull !! <br />Read following user_json_url from backend to get verified phone number - '+user_json_url+' <br /> Please delete this debug message code from phoneEmailListener function once you implement integration step 2.</span>');
-    }
-</script> -->
+        <h2>Registration Form</h2>
+        <form id="registrationForm">
+            <div class="input-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="input-group">
+                <label for="mobile">Mobile Number:</label>
+                <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="college">College:</label>
+                <select id="college" name="college" required>
+                    <option value="Lnd college">Lnd college</option>
+                    <option value="MS college">MS college</option>
+                    <option value="SNS college">SNS college</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="course">Course:</label>
+                <select id="course" name="course" required>
+                    <option value="UG">UG</option>
+                    <option value="PG">PG</option>
+                    <option value="B.Tech">B.Tech</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="captcha">Enter the number 42 to verify:</label>
+                <input type="text" id="captcha" name="captcha" required>
+            </div>
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+    </div>
 
-        <div class="form-group">
-            <button type="submit">Submit</button>
-        </div>
-        </div>
-        
-    </form>
-</div>
-
-
-  
-  </main><!-- End #main -->
+    
+</main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
@@ -257,7 +242,8 @@
 
   <!-- Template Main JS File -->
   <script src="../assets/js/main.js"></script>
-  <script src="script.js"></script>
+  <script type="module" src="firebase-config.js"></script>
+  <script type="module" src="form-handler.js"></script>
 
 </body>
 
