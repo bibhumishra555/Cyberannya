@@ -1,13 +1,12 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-analytics.js";
-import { getDatabase } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-database.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-firestore.js";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
     apiKey: "AIzaSyCUvfhKyttDlt0429-eNktvlyi2tevBG8g",
     authDomain: "cyberannya.firebaseapp.com",
-    databaseURL: "https://cyberannya-default-rtdb.firebaseio.com",
     projectId: "cyberannya",
     storageBucket: "cyberannya.appspot.com",
     messagingSenderId: "635998414209",
@@ -18,6 +17,6 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-const database = getDatabase(app);
+const db = getFirestore(app);
 
-export { database };
+export { db };
