@@ -1055,7 +1055,7 @@ section {
 .time-schedule{
   background-color: #99d19a;
 }
-.time-schedule .resume-title {
+.time-schedule.resume-title {
   font-size: 26px;
   font-weight: 700;
   margin-top: 20px;
@@ -1064,14 +1064,14 @@ section {
   color: #106eea;
 }
 
-.time-schedule .resume-item {
+.time-schedule.resume-item {
   padding: 0 0 20px 20px;
   margin-top: -2px;
   border-left: 2px solid rgba(16, 34, 236, 0.2);
   position: relative;
 }
 
-.time-schedule .resume-item h4 {
+.time-schedule.resume-item h4 {
   line-height: 18px;
   font-size: 18px;
   font-weight: 600;
@@ -1081,7 +1081,7 @@ section {
   margin-bottom: 10px;
 }
 
-.time-schedule .resume-item h5 {
+.time-schedule.resume-item h5 {
   font-size: 16px;
   background: rgba(255, 255, 255, 0.15);
   padding: 5px 15px;
@@ -1090,20 +1090,20 @@ section {
   margin-bottom: 10px;
 }
 
-.time-schedule .resume-item ul {
+.time-schedule.resume-item ul {
   padding-left: 20px;
   color: #ff0000;
 }
 
-.time-schedule .resume-item ul li {
+.time-schedule.resume-item ul li {
   padding-bottom: 10px;
 }
 
-.time-schedule .resume-item:last-child {
+.time-schedule.resume-item:last-child {
   padding-bottom: 0;
 }
 
-.time-schedule .resume-item::before {
+.time-schedule.resume-item::before {
   content: "";
   position: absolute;
   width: 16px;
