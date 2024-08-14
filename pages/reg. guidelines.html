@@ -268,9 +268,24 @@
             </ul>
         </section>
 
-        <div class="reg-buttons">
-        <a href="https://www.youtube.com/" class="reg-button">CyberAnnya Registration</a>
+        <div class="d-flex justify-content-center ">
+    <div class="pe_signin_button" data-client-id="11767695835075961518">
+        <script src="https://www.phone.email/sign_in_button_v1.js" async></script>
     </div>
+</div>
+
+          <script>
+    function phoneEmailListener(userObj) {
+        var user_json_url = userObj.user_json_url;
+        
+        // You can submit your form here or redirect user to post login dashboard page
+        // Send user_json_url to your backend to retrieve user info (i.e. country code and phone number) from this URL.
+        alert('Phone Verification Successful!!\n Now you\'ll redirected to Registration page\.');
+        
+        // Redirect to the specified URL
+        window.location.href = "https://zgijpvte.formester.com/f/41f0399e-2828-4cc7-8fba-b660b84c9b3b";
+    }
+</script>
 
 
   </main><!-- End #main -->
