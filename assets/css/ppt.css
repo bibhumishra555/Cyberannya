@@ -705,6 +705,71 @@ section {
             margin: 20px auto;
             width: 60%; /* Set image width to 40% */
         }
+
+/*--------------------------------------------------------------
+# Speakers section
+--------------------------------------------------------------*/
+.speakers .icon-box {
+  padding: 25px;
+  position: relative;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);
+  transition: all 0.9s ease-in-out;
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.speakers .icon-box::before {
+  content: "";
+  position: absolute;
+  background: #1900FE;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 92%;
+  transition: all 0.9s;
+  z-index: 0;
+}
+
+.speakers .icon-box:hover::before {
+  background: 0;
+  top: 0;
+  border-radius: 0px;
+}
+
+
+.speakers .title {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 30px;
+}
+
+.speakers .title a {
+  color: #111;
+}
+
+.speakers .description {
+  font-size: 15px;
+  line-height: 28px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.speakers .icon-box:hover .title a,
+.speakers .icon-box:hover .description {
+  color: #fff;
+}
+
+.speakers .icon-box:hover .icon i {
+  color: #fff;
+}
+.speakers .social-links{
+  position: absolute;
+  left: 105px;
+  bottom: 1.5px;
+}
+
 /*--------------------------------------------------------------
 # registration botton
 --------------------------------------------------------------*/
