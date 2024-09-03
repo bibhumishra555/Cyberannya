@@ -1526,37 +1526,37 @@ section {
 
 /* Button Styles */
 .dropbtn {
-    background-color: #106eea; /* Green background */
-    color: white; /* White text */
-    padding: 16px; /* Padding */
-    font-size: 16px; /* Font size */
-    border: none; /* Remove border */
-    cursor: pointer; /* Pointer on hover */
-    border-radius: 5px; /* Rounded corners */
+    background-color: #106eea; 
+    color: white; 
+    padding: 16px; 
+    font-size: 16px; 
+    border: none; 
+    cursor: pointer; 
+    border-radius: 5px; 
 }
 
 .dropbtn:hover {
-    background-color: #5799F0; /* Darker green on hover */
+    background-color: #5799F0; 
 }
 
-/* Dropdown Content (Hidden by default) */
+
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: #B7D3F8;
-    min-width: 250px;
+    min-width: 350px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     border-radius: 5px;
     padding: 5px;
 }
 
-/* Show the dropdown menu on hover */
+
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-/* Dropdown Items Styles */
+
 .dropdown-content div {
     padding: 6px;
     text-align: center;
@@ -1568,6 +1568,6 @@ section {
 }
 
 .dropdown-content div:hover {
-    background-color: #5799F0; /* Light grey on hover */
+    background-color: #5799F0; 
 }
 
