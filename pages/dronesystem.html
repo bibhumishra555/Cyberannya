@@ -190,23 +190,44 @@
             </ul>
         </section>
 <div class="d-flex justify-content-center ">
-    <div class="pe_signin_button" data-client-id="11767695835075961518">
-        <script src="https://www.phone.email/sign_in_button_v1.js" async></script>
-    </div>
-</div>
+<div class="dropdown">
+        <button class="dropbtn">Get Registered</button>
+        <div class="dropdown-content">
+            <!-- phone-->
+            <div>  
+       			<div class="pe_signin_button" data-client-id="11767695835075961518">
+    				<script src="https://www.phone.email/sign_in_button_v1.js" async></script>
+				</div>
+			</div>
+				<script>
+    				function phoneEmailListener(userObj) {
+      				  var user_json_url = userObj.user_json_url;
+        
+        			alert('Phone Verification Successful!!\n Now you\'ll redirected to Registration page\. A');
+        
+        			window.location.href = "https://zgijpvte.formester.com/f/2882bd1b-e313-4687-a1fc-6fa21f800a4e";
+   							 }
+				</script>
 
-          <script>
-    function phoneEmailListener(userObj) {
+			<!-- email -->
+			<div class="pe_verify_email" data-client-id="11767695835075961518"><script src="https://www.phone.email/verify_email_v1.js" async></script></div> 
+<script>
+    function phoneEmailReceiver(userObj){
         var user_json_url = userObj.user_json_url;
         
-        // You can submit your form here or redirect user to post login dashboard page
-        // Send user_json_url to your backend to retrieve user info (i.e. country code and phone number) from this URL.
-        alert('Phone Verification Successful!!\n Now you\'ll redirected to Registration page\.');
+       
+        alert('Phone Verification Successful!!\n Now you\'ll redirected to Registration page\. A');
         
-        // Redirect to the specified URL
-        window.location.href = "https://zgijpvte.formester.com/f/2882bd1b-e313-4687-a1fc-6fa21f800a4e";
+        			window.location.href = "https://zgijpvte.formester.com/f/2882bd1b-e313-4687-a1fc-6fa21f800a4e";
     }
 </script>
+
+
+       	</div>
+   	 </div>
+</div>
+
+
 
 
 
