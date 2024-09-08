@@ -189,11 +189,12 @@
                 <li>Participants agree to allow CyberAnya 3.0 to use their presentations for promotional purposes.</li>
             </ul>
         </section>    
-<div class="d-flex justify-content-center ">
+<!--
+		<div class="d-flex justify-content-center ">
 <div class="dropdown">
         <button class="dropbtn">Get Registered</button>
         <div class="dropdown-content">
-            <!-- phone-->
+            <!-- phone--
             <div>  
        			<div class="pe_signin_button" data-client-id="11767695835075961518">
     				<script src="https://www.phone.email/sign_in_button_v1.js" async></script>
@@ -209,7 +210,7 @@
    							 }
 				</script>
 
-			<!-- email -->
+			<!-- email --
 			<div class="pe_verify_email" data-client-id="11767695835075961518"><script src="https://www.phone.email/verify_email_v1.js" async></script></div> 
 <script>
     function phoneEmailReceiver(userObj){
@@ -226,7 +227,25 @@
        	</div>
    	 </div>
 </div>
+-->
+		<div class="d-flex justify-content-center ">
+    <div class="pe_signin_button" data-client-id="11767695835075961518">
+        <script src="https://www.phone.email/sign_in_button_v1.js" async></script>
+    </div>
+</div>
 
+          <script>
+    function phoneEmailListener(userObj) {
+        var user_json_url = userObj.user_json_url;
+        
+        // You can submit your form here or redirect user to post login dashboard page
+        // Send user_json_url to your backend to retrieve user info (i.e. country code and phone number) from this URL.
+        alert('Phone Verification Successful!!\n Now you\'ll redirected to Registration page\.');
+        
+        // Redirect to the specified URL
+        window.location.href = "https://zgijpvte.formester.com/f/3b7da733-54e3-4b50-abfa-8efe17af41bb";
+    }
+</script>
 
   </main><!-- End #main -->
 
