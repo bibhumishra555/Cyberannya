@@ -770,45 +770,7 @@ section {
   bottom: 1.5px;
 }
 
-/*--------------------------------------------------------------
-# registration botton
---------------------------------------------------------------*/
-        .reg-buttons {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .reg-button {
-            padding: 10px 20px;
-            margin-right: 10px;
-            background-color: #106eea;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .reg-button:hover {
-            background-color: #d0def5;
-    color: #106eea;
-        }
 
-        .cta-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-right: none;
-    background-color: #106eea;
-    color: white;
-    text-decoration: none;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.cta-btn:hover {
-    background-color: #d0def5;
-    color: #106eea;
-}
 
 /*--------------------------------------------------------------
 # Footer
